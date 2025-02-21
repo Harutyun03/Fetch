@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.container{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 15px;
+}
+ol,ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+
+body{
+    background: linear-gradient(135deg, #153677, #4e085f);
+    
+}
+
+img{
+    width: 150px;
+}
+
+.box{
+    border: 2px solid black;
+    max-width: 500px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.flex-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}

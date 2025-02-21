@@ -1,0 +1,43 @@
+h2{
+    color: black;
+}
+
+.list{
+   text-align: center;
+   margin-top: 50px;
+   border: 2px solid black;
+   max-width: 500px;
+   margin: auto;
+   background-color: white;
+   border-radius: 18px;
+}
+
+p{
+    color: black;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+span{
+    color: black;
+    font-size: 20px;
+    
+}
+
+.image{
+    margin-top: 15px;
+}
+
+.btn{
+    padding: 12px 23px;
+    border-radius: 15px;
+    font-size: 17px;
+    background-color: #f3b01b;
+    color: white;
+    border:1px solid #f3b01b ;
+    cursor: pointer;
+}
+
+.btngroup{
+    margin-top: 15px;
+}
