@@ -1,10 +1,16 @@
 import { useParams, useNavigate} from 'react-router-dom'
 import './Products.css'
+import { useEffect,useState } from 'react'
 
 function Products(props){
     const {id} = useParams()
+    const [data, setData] = useState([])
+    useEffect(() => {
+       fetch(`https://fakestoreapi.com/products/${id}`)
+       .then((res) => res.json())
+       .then((res) => setData(res))
+    },[])
 
-  const product = props.products.find((el) => el.id === +id)
 
   const navigate = useNavigate()
 
@@ -14,16 +20,22 @@ function Products(props){
 
   return(
     <div className='list'>
-        <h2>{product.title}</h2>
-        <img src={product.image} className='image'/>
-        <p>{product.description}</p>
-        <span>Price:{product.price}$</span>
-        <div className='btngroup'>
+    
+            
+                <h2>{data.title}</h2>
+                <img src={data.image} className='image'/>
+                <p>{data.description}</p>
+               <span>Price:{data.price}$</span>
+            
+             <div className='btngroup'>
+              <button type='submit' onClick={goBack} className='btn'>Go back</button>
+            </div>
+            
+       
+      
+      </div>
 
-        <button type='submit' onClick={goBack} className='btn'>Go back</button>
 
-        </div>
-    </div>
   )
 }
 
